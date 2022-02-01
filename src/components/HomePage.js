@@ -1,13 +1,11 @@
 import { useEffect } from 'react';
-// import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getProductFromAPI } from '../redux/products/reducer';
-// import Details from './DetailsPage';
 import Button from './ArrowButton';
+import Categories from './Categories';
 
 const Home = () => {
   const data = useSelector((state) => state.productsReducer);
-  // const history = useHistory();
   console.log(data, 'this is data');
   const dispatch = useDispatch();
   useEffect(() => {
@@ -15,17 +13,15 @@ const Home = () => {
   }, []);
   return (
     <>
+      <Categories data={data} />
       <div className="products-grid">
         {data.map((product) => (
           <div key={product.id}>
-            <p id={product.id}>
+            <p className="title" id={product.id}>
               {product.title}
               <Button />
             </p>
-            <p id={product.id}>{product.category}</p>
-            <p id={product.id}>
-              <img src={product.image} alt={product.title} />
-            </p>
+            <p className="category-name" id={product.id}>{product.category}</p>
           </div>
         ))}
       </div>

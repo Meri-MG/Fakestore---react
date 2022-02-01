@@ -1,7 +1,7 @@
 :root {
   --primary-light-blue: #5687e4;
-  --primary-dark-blue: #3f62a5;
-  --primary-mid-blue: #4268af;
+  --primary-dark-blue: #263c66;
+  --primary-mid-blue: #456db6;
   --primary-white: #d5e1f6;
   --primary-more-white: #dbe7f7;
 }
@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: #0057ff;
+  background-color: var(--primary-dark-blue);
 }
 
 .products-grid {
@@ -22,11 +22,43 @@ body {
   margin-top: 2rem;
   justify-content: center;
   grid-template-columns: repeat(2, 35rem);
-  grid-template-rows: minmax(15rem, auto) repeat(5, 15rem);
+  grid-template-rows: repeat(10, 10rem);
 }
 
 .products-grid > div {
   border: 1px solid var(--primary-white);
+  background-color: var(--primary-mid-blue);
+}
+
+.products-grid > div:nth-child(4n+2),
+.products-grid > div:nth-child(4n+3) {
+  background-color: var(--primary-light-blue);
+}
+
+.info-wrapper {
+  display: flex;
+  width: 60%;
+  margin: 10rem auto;
+  border: 1px solid var(--primary-white);
+  padding: 2rem;
+  align-items: center;
+}
+
+.info-wrapper img {
+  width: 200px;
+  margin-left: 2rem;
+}
+
+.info-wrapper p {
+  margin-bottom: 1rem;
+  color: var(--primary-more-white);
+  font-weight: bold;
+}
+
+.info-wrapper .span-elements {
+  margin-left: 1rem;
+  color: var(--primary-white);
+  font-weight: normal;
 }
 
 .products-grid > div p {
@@ -36,16 +68,48 @@ body {
   justify-content: space-between;
 }
 
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-more-white);
+}
+
+.category-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--primary-white);
+}
+
 .arrow {
   width: 30px;
 }
 
 .products-grid img {
-  width: 10rem;
+  width: 300px;
 }
 
 .arrowBtn {
   background: transparent;
   border: none;
   cursor: pointer;
+  color: var(--primary-white);
+}
+
+.arrowBtn:hover {
+  color: var(--primary-mid-blue);
+  background-color: var(--primary-more-white);
+  border-radius: 50%;
+  height: 1rem;
+  text-align: center;
+}
+
+.options {
+  display: block;
+  outline: none;
+  width: 25%;
+  margin: 2rem auto;
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+  background-color: var(--primary-white);
+  color: var(--primary-dark-blue);
 }
