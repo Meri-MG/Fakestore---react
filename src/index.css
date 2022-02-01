@@ -1,3 +1,34 @@
+:root {
+  --primary-light-blue: #5687e4;
+  --primary-dark-blue: #3f62a5;
+  --primary-mid-blue: #4268af;
+  --primary-white: #d5e1f6;
+  --primary-more-white: #dbe7f7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 body {
-  background-color: aqua;
+  background-color: #0057ff;
+}
+
+.products-grid {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(2, 20rem);
+  grid-template-rows: minmax(15rem, auto) repeat(5, 15rem);
+}
+
+.products-grid > div {
+  border: 1px solid var(--primary-white);
+}
+
+.products-grid img {
+  width: 10rem;
 }

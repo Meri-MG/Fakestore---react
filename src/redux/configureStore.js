@@ -2,9 +2,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import herosReducer from './heros/reducer';
+import productsReducer from './products/reducer';
 
-const reducer = combineReducers({ herosReducer });
+const reducer = combineReducers({ productsReducer });
 
 const store = createStore(reducer, applyMiddleware(logger, thunk));
 
