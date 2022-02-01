@@ -21,7 +21,7 @@ body {
   display: grid;
   margin-top: 2rem;
   justify-content: center;
-  grid-template-columns: repeat(2, 20rem);
+  grid-template-columns: repeat(2, 35rem);
   grid-template-rows: minmax(15rem, auto) repeat(5, 15rem);
 }
 
@@ -29,6 +29,23 @@ body {
   border: 1px solid var(--primary-white);
 }
 
+.products-grid > div p {
+  width: 90%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrow {
+  width: 30px;
+}
+
 .products-grid img {
   width: 10rem;
+}
+
+.arrowBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
