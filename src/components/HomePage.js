@@ -21,7 +21,9 @@ const Home = () => {
               {product.title}
               <Button />
             </p>
-            <p className="category-name" id={product.id}>{product.category}</p>
+            <p className="category-name" id={product.id}>
+              {product.category}
+            </p>
           </div>
         ))}
       </div>
