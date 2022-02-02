@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { filterCategory } from '../redux/products/reducer';
+import PropTypes from 'prop-types';
 
 const Categories = (props) => {
   const [category, setCategory] = useState('');
-  console.log(props, 'these are props');
   const data = props;
   const unique = [...new Set(data.data.map((item) => item.category))];
-  const dispatch = useDispatch();
+  const { handleClick } = props;
+
   return (
     <select
       className="options"
-      onClick={() => dispatch(filterCategory())}
       onChange={(e) => setCategory(e.target.value)}
+      onClick={handleClick}
       required
     >
-      <option value={category}>Select a Category</option>
+      <option value="Select a Category">Select a Category</option>
+      <option value={category}> </option>
       {unique.map((category) => (
         <option key={category} value={category}>
           {category}
@@ -23,6 +23,10 @@ const Categories = (props) => {
       ))}
     </select>
   );
+};
+
+Categories.propTypes = {
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default Categories;

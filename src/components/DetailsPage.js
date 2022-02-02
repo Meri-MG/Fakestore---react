@@ -4,7 +4,6 @@ import { getProductFromAPI } from '../redux/products/reducer';
 
 const Details = () => {
   const data = useSelector((state) => state.productsReducer);
-  // const history = useHistory();
   console.log(data, 'this is data details');
   const dispatch = useDispatch();
   useEffect(() => {
