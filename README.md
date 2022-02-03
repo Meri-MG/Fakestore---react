@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Metrics webapp
+- This React capstone project is about building a web application to check a list of metrics (numeric values) that was created using a [fakeStore API](https://fakestoreapi.com/) and making use of React and Redux.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![homePage](https://raw.githubusercontent.com/Meri-MG/metrics-webapp---react/chore/display_pages/homePage.png)
+![detailsPage](https://raw.githubusercontent.com/Meri-MG/metrics-webapp---react/chore/display_pages/detailsPage.png)
 
-## Available Scripts
+## Built With
 
-In the project directory, you can run:
+- React
+- Redux
+- HTML
+- CSS
+- VS code
 
-### `npm start`
+## Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> Project live demo on [Netlify]()
+> Project Video [presentation](https://www.loom.com/share/8ed9b1ae59274497a848e6ea962088c1);
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# Getting Started
+## Prerequisites:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+- Create an account on github
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Install gitbash or use git on the command line.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Use an IDE of your preference such as VScode.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Steps to follow:
 
-### `npm run eject`
+- Choose a folder in your local machine where you want this repository to be copied
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Clone this [repository](https://github.com/Meri-MG/metrics-webapp---react) to your locaL machine with `git clone` command.
+It should look similar to this git clone https://github.com/smithj/azure-docs.git Enter your github credentials if prompted.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Navigate to react-group-project directory.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- On the command line, at the project's root, run 'npm install' to install app dependencies.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Next, run 'npm start' which will run the app in the development mode.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Author
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+:woman: Meri Gogichashvili
+- [GitHub](https://github.com/Meri-MG) 
+- [LinkedIn](https://www.linkedin.com/in/meri-gogichashvili/)
 
-### Code Splitting
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions, issues, and feature requests are welcome!
 
-### Analyzing the Bundle Size
+Feel free to check the [issues page](https://github.com/Meri-MG/metrics-webapp---react/issues)).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Show your support
 
-### Making a Progressive Web App
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
+Thanks to my teammates, learning and coding partners.
+Thanks to the owner of original [design idea](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) - [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
 
-### Advanced Configuration
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./MIT.md) licensed.

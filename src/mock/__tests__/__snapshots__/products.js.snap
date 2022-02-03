@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets Component test Renders Rocket Page 1`] = `
+Array [
+  <select
+    className="options"
+    onChange={[Function]}
+    onClick={[Function]}
+    required={true}
+  >
+    <option
+      value="Select a Category"
+    >
+      Select a Category
+    </option>
+    <option
+      value=""
+    >
+       
+    </option>
+  </select>,
+  <div
+    className="products-grid"
+  />,
+]
+`;
