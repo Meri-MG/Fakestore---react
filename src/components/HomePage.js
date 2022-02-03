@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-// import { Link } from 'react-router-dom';
-// import { FaArrowAltCircleRight } from 'react-icons/fa';
 import { getProductFromAPI } from '../redux/products/reducer';
 import Categories from './Categories';
 import Button from './ArrowButton';
@@ -27,9 +25,6 @@ const Home = () => {
             <div key={product.id}>
               <p className="title" id={product.id}>
                 {product.title}
-                {/* <Link className="arrowBtn" to={`/details/${product.id}`}>
-                  <FaArrowAltCircleRight />
-                </Link> */}
                 <Button id={product.id} />
               </p>
               <p className="category-name" id={product.id}>
@@ -41,9 +36,6 @@ const Home = () => {
             <div key={product.id}>
               <p className="title" id={product.id}>
                 {product.title}
-                {/* <Link className="arrowBtn" to={`/details/${product.id}`}>
-                  <FaArrowAltCircleRight />
-                </Link> */}
                 <Button id={product.id} />
               </p>
               <p className="category-name" id={product.id}>
