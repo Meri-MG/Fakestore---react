@@ -15,7 +15,7 @@
 ## Live Demo
 
 > Project live demo on [Netlify]()
-> Project Video [presentation](https://www.loom.com/share/8ed9b1ae59274497a848e6ea962088c1);
+> Project Video [presentation](https://www.loom.com/share/8ed9b1ae59274497a848e6ea962088c1)
 
 
 # Getting Started
@@ -52,7 +52,7 @@ It should look similar to this git clone https://github.com/smithj/azure-docs.gi
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Meri-MG/metrics-webapp---react/issues)).
+Feel free to check the [issues page](https://github.com/Meri-MG/metrics-webapp---react/issues).
 
 ## Show your support
 
