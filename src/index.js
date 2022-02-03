@@ -13,7 +13,8 @@ ReactDOM.render(
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/:details" element={<Details />} />
+          <Route exact path="/details/:id" element={<Details />} />
+          {/* <Route path="/details/:id" render={(props) => (<Details {...props} />)} /> */}
         </Routes>
       </BrowserRouter>
     </Provider>

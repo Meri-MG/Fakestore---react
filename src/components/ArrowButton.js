@@ -5,16 +5,16 @@ import { FaArrowAltCircleRight } from 'react-icons/fa';
 
 const Button = (props) => {
   const { id } = props;
-  // onClick={onArrowClick}
+  const { onArrowClick } = props;
   return (
-    <Link className="arrowBtn" to={`/${id}`}>
+    <Link className="arrowBtn" onClick={onArrowClick} to={`/details/${id}`}>
       <FaArrowAltCircleRight />
     </Link>
   );
 };
 
 Button.propTypes = {
-  // onArrowClick: PropTypes.func.isRequired,
+  onArrowClick: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
 };
 
