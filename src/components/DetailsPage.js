@@ -47,36 +47,6 @@ const Details = () => {
         ))}
       </div>
     </>
-    // <>
-    //   <div className="details-page" id={id}>
-    //     <div className="info-wrapper" key={id}>
-    //       <div>
-    //         <p id={id}>
-    //           Product Description:
-    //           <span className="span-elements">{data.description}</span>
-    //         </p>
-    //         <p id={id}>
-    //           Product Price:
-    //           <span className="span-elements">
-    //             $
-    //             {id.price}
-    //           </span>
-    //         </p>
-    //         <p id={id}>
-    //           Product Rate:
-    //           <span className="span-elements">{id.rating.rate}</span>
-    //         </p>
-    //         <p id={id.id}>
-    //           Product Count:
-    //           <span className="span-elements">{id.rating.count}</span>
-    //         </p>
-    //       </div>
-    //       <div>
-    //         <img src={id.image} alt={id.title} />
-    //       </div>
-    //     </div>
-    //   </div>
-    // </>
   );
 };
 
