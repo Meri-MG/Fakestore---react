@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-> Project live demo on [Netlify]()
+> Project live demo on [Netlify](https://angry-yalow-17c6ab.netlify.app/)
 > Project Video [presentation](https://www.loom.com/share/8ed9b1ae59274497a848e6ea962088c1)
 
 
