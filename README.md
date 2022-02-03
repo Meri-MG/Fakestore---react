@@ -1,8 +1,8 @@
-# Space-Travelers-Hub
+# Metrics webapp
 - This React capstone project is about building a web application to check a list of metrics (numeric values) that was created using a [fakeStore API](https://fakestoreapi.com/) and making use of React and Redux.
 
-![homePage](https://raw.githubusercontent.com/Meri-MG/react-group-project/chore/display_pages/homePage.png)
-![detailsPage](https://raw.githubusercontent.com/Meri-MG/react-group-project/chore/display_pages/detailsPage.png)
+![homePage](https://raw.githubusercontent.com/Meri-MG/metrics-webapp---react/chore/display_pages/homePage.png)
+![detailsPage](https://raw.githubusercontent.com/Meri-MG/metrics-webapp---react/chore/display_pages/detailsPage.png)
 
 ## Built With
 
@@ -15,6 +15,7 @@
 ## Live Demo
 
 > Project live demo on [Netlify]()
+> Project Video [presentation](https://www.loom.com/share/8ed9b1ae59274497a848e6ea962088c1);
 
 
 # Getting Started
