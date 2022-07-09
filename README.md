@@ -1,5 +1,5 @@
 # Metrics webapp
-- This React capstone project is about building a web application to check a list of metrics (numeric values) that was created using a [fakeStore API](https://fakestoreapi.com/) and making use of React and Redux.
+- This React project is about building a web application to check a list of metrics (numeric values) retrieved from a [fakeStore API](https://fakestoreapi.com/), app allows users to filter through the categories and price ranges, as well as use a search bar to find a particular product.
 
 ![homePage](https://raw.githubusercontent.com/Meri-MG/metrics-webapp---react/chore/display_pages/homePage.png)
 ![detailsPage](https://raw.githubusercontent.com/Meri-MG/metrics-webapp---react/chore/display_pages/detailsPage.png)
@@ -14,8 +14,7 @@
 
 ## Live Demo
 
-> Project live demo on [Netlify](https://angry-yalow-17c6ab.netlify.app/)
-> Project Video [presentation](https://www.loom.com/share/8ed9b1ae59274497a848e6ea962088c1)
+> Project live demo on [Netlify](https://fakestore-metrics.netlify.app/)
 
 
 # Getting Started
@@ -32,36 +31,36 @@
 
 - Choose a folder in your local machine where you want this repository to be copied
 
-- Clone this [repository](https://github.com/Meri-MG/metrics-webapp---react) to your locaL machine with `git clone` command.
-It should look similar to this git clone https://github.com/smithj/azure-docs.git Enter your github credentials if prompted.
+- Clone this [repository](https://github.com/Meri-MG/Fakestore---react) to your local machine 
+- ```
+  git clone git@github.com:Meri-MG/Fakestore---react.git
+  ```
 
-- Navigate to react-group-project directory.
+- Navigate to `cd bookstore---react`  directory.
 
-- On the command line, at the project's root, run 'npm install' to install app dependencies.
-
-- Next, run 'npm start' which will run the app in the development mode.
+- To install all the app dependencies on the command line run
+- ```
+  npm install
+  ``` 
+- To run app in the development mode run 
+- ```
+  npm start
+  ```
 
 
 ## Author
 
-:woman: Meri Gogichashvili
-- [GitHub](https://github.com/Meri-MG) 
+:woman: **Meri Gogichashvili**
+
+- [GitHub](https://github.com/Meri-MG)
 - [LinkedIn](https://www.linkedin.com/in/meri-gogichashvili/)
 
 ## 🤝 Contributing
+- Contributions, issues, and feature requests are welcome!
+- Feel free to check the [issues page](https://github.com/Meri-MG/Fakestore---react/issues).
 
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](https://github.com/Meri-MG/metrics-webapp---react/issues).
-
-## Show your support
-
-Give a ⭐️ if you like this project!
+# Show your support
+- Give a ⭐ if you like this project!
 
 ## Acknowledgments
-Thanks to my teammates, learning and coding partners.
-Thanks to the owner of original [design idea](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) - [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
+- Thanks to the owner of original [design idea](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) - [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
