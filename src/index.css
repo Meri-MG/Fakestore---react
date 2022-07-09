@@ -95,14 +95,11 @@ body {
   border: none;
   cursor: pointer;
   color: var(--primary-white);
+  transition: all 0.3s ease;
 }
 
 .arrowBtn:hover {
-  color: var(--primary-mid-blue);
-  background-color: var(--primary-more-white);
-  border-radius: 50%;
-  height: 1rem;
-  text-align: center;
+  transform: scale(1.2);
 }
 
 .options {
