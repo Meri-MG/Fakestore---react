@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { func } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
 
@@ -13,8 +13,12 @@ const Button = (props) => {
   );
 };
 
+Button.defaultProps = {
+  onArrowClick: func,
+};
+
 Button.propTypes = {
-  onArrowClick: PropTypes.func.isRequired,
+  onArrowClick: PropTypes.func,
   id: PropTypes.number.isRequired,
 };
 

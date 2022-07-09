@@ -32,7 +32,7 @@ function SearchWidget({
 
 SearchWidget.propTypes = {
   handleSearch: PropTypes.func.isRequired,
-  open: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
   setOpen: PropTypes.func.isRequired,
   handleSearchClick: PropTypes.func.isRequired,
 };
