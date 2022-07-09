@@ -3,46 +3,96 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getProductFromAPI } from '../redux/products/reducer';
 import Categories from './Categories';
 import Button from './ArrowButton';
+import SearchWidget from './SearchWidget';
 
 const Home = () => {
   const data = useSelector((state) => state.productsReducer);
   const [value, setValue] = useState('');
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchField, setSearchField] = useState('');
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProductFromAPI());
+    setIsLoaded(true);
   }, []);
-  const handleClick = (e) => {
+
+  let selectedChangeFilter;
+
+  const handleChange = (e) => {
     setValue(e.target.value);
+    setSearchOpen(false);
+    setSearchField('');
   };
-  // eslint-disable-next-line max-len
-  const filteredCategories = data.filter((product) => product.category.toLowerCase().includes(value.toLowerCase()));
+
+  const handleSearch = (e) => {
+    setSearchField(e.target.value);
+  };
+
+  const handleSearchClick = () => {
+    setValue('');
+  };
+
+  if (value === "men's clothing") {
+    selectedChangeFilter = data.filter(
+      (product) => product.category === "men's clothing",
+    );
+  } else if (value === "women's clothing") {
+    selectedChangeFilter = data.filter(
+      (product) => product.category === "women's clothing",
+    );
+  } else if (value === 'jewelery') {
+    selectedChangeFilter = data.filter(
+      (product) => product.category === 'jewelery',
+    );
+  } else if (value === 'electronics') {
+    selectedChangeFilter = data.filter(
+      (product) => product.category === 'electronics',
+    );
+  } else if (value === 'lowest price') {
+    // eslint-disable-next-line max-len
+    selectedChangeFilter = data.sort((a, b) => a.price - b.price);
+  } else if (value === 'highest price') {
+    // eslint-disable-next-line max-len
+    selectedChangeFilter = data.sort((a, b) => b.price - a.price);
+  } else if (value === 'Select a Category' || value === 'all') {
+    selectedChangeFilter = data;
+  } else {
+    // eslint-disable-next-line max-len
+    selectedChangeFilter = data.filter((product) => product.title.toLowerCase().includes(searchField.toLowerCase()));
+  }
+
+  if (!isLoaded) {
+    return <div className="loading">loading...</div>;
+  }
   return (
     <>
-      <Categories data={data} handleClick={handleClick} />
+      <SearchWidget
+        handleSearch={handleSearch}
+        open={searchOpen}
+        setOpen={setSearchOpen}
+        handleSearchClick={handleSearchClick}
+      />
+      <Categories
+        data={data}
+        handleChange={handleChange}
+        categorySelected={value}
+      />
       <div className="products-grid">
-        {value === 'Select a Category'
-          ? data.map((product) => (
-            <div key={product.id}>
-              <p className="title" id={product.id}>
-                {product.title}
-                <Button id={product.id} />
-              </p>
-              <p className="category-name" id={product.id}>
-                {product.category}
-              </p>
-            </div>
-          ))
-          : filteredCategories.map((product) => (
-            <div key={product.id}>
-              <p className="title" id={product.id}>
-                {product.title}
-                <Button id={product.id} />
-              </p>
-              <p className="category-name" id={product.id}>
-                {product.category}
-              </p>
-            </div>
-          ))}
+        {selectedChangeFilter.map((product) => (
+          <div key={product.id}>
+            <p className="title">
+              {product.title}
+              <Button id={product.id} />
+            </p>
+            <p className="category-name">{product.category}</p>
+            <p className="category-name">
+              $
+              {product.price}
+            </p>
+          </div>
+        ))}
       </div>
     </>
   );
