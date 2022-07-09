@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 const Categories = (props) => {
   const data = props;
   const unique = [...new Set(data.data.map((item) => item.category))];
-  const { handleClick } = props;
+  const { handleChange } = props;
 
   return (
     <select
       className="options"
-      onChange={handleClick}
+      onChange={handleChange}
       value={data.categorySelected}
       required
     >
@@ -27,7 +27,7 @@ const Categories = (props) => {
 };
 
 Categories.propTypes = {
-  handleClick: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
 };
 
 export default Categories;

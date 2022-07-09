@@ -218,9 +218,9 @@ body {
 }
 
 .search.active .input {
-  width: 200px;
+  width: 300px;
 }
 
 .search.active .btn {
-  display: none;
+  transform: translateX(10px);
 }

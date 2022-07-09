@@ -1,23 +1,29 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { BsSearch } from 'react-icons/bs';
 import { getProductFromAPI } from '../redux/products/reducer';
 import Categories from './Categories';
 import Button from './ArrowButton';
+import SearchWidget from './SearchWidget';
 
 const Home = () => {
   const data = useSelector((state) => state.productsReducer);
   const [value, setValue] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchField, setSearchField] = useState('');
 
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProductFromAPI());
     setIsLoaded(true);
   }, []);
-  const handleClick = (e) => {
+
+  const handleChange = (e) => {
     setValue(e.target.value);
+  };
+
+  const handleSearch = (e) => {
+    setSearchField(e.target.value);
   };
 
   let selectedChangeFilter = data;
@@ -45,20 +51,22 @@ const Home = () => {
     selectedChangeFilter = data.sort((a, b) => b.price - a.price);
   }
 
+  // eslint-disable-next-line max-len
+  selectedChangeFilter = data.filter((product) => product.title.toLowerCase().includes(searchField.toLowerCase()));
+
   if (!isLoaded) {
     return <>loading...</>;
   }
   return (
     <>
-      <form action="" className={`search ${menuOpen && 'active'}`}>
-        <input type="text" className="input" placeholder="Search..." onClick={() => setMenuOpen(!menuOpen)} />
-        <button type="button" className="btn" onClick={() => setMenuOpen(!menuOpen)}>
-          <BsSearch className="btn-icon" />
-        </button>
-      </form>
+      <SearchWidget
+        handleSearch={handleSearch}
+        open={searchOpen}
+        setOpen={setSearchOpen}
+      />
       <Categories
         data={data}
-        handleClick={handleClick}
+        handleChange={handleChange}
         categorySelected={value}
       />
       <div className="products-grid">
