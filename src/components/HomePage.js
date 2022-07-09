@@ -9,6 +9,8 @@ const Home = () => {
   const data = useSelector((state) => state.productsReducer);
   const [value, setValue] = useState('');
   const [isLoaded, setIsLoaded] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProductFromAPI());
@@ -48,9 +50,9 @@ const Home = () => {
   }
   return (
     <>
-      <form action="" className="search">
-        <input type="text" className="input" placeholder="Search..." />
-        <button type="button" className="btn">
+      <form action="" className={`search ${menuOpen && 'active'}`}>
+        <input type="text" className="input" placeholder="Search..." onClick={() => setMenuOpen(!menuOpen)} />
+        <button type="button" className="btn" onClick={() => setMenuOpen(!menuOpen)}>
           <BsSearch className="btn-icon" />
         </button>
       </form>
