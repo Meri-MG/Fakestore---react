@@ -21,7 +21,7 @@ body {
   display: grid;
   margin-top: 2rem;
   justify-content: center;
-  grid-template-columns: repeat(2, 35rem);
+  grid-template-columns: repeat(2, 40%);
   grid-template-rows: repeat(10, 10rem);
 }
 
@@ -108,12 +108,17 @@ body {
 .options {
   display: block;
   outline: none;
-  width: 25%;
+  width: 300px !important;
   margin: 2rem auto;
-  padding: 0.5rem 2rem;
+  padding: 1rem 1rem;
   border-radius: 3px;
   background-color: var(--primary-white);
   color: var(--primary-dark-blue);
+}
+
+.selectDiv {
+  width: 300px;
+  margin: 0 auto;
 }
 
 /* navigation styles  */
@@ -172,6 +177,8 @@ body {
   justify-content: space-between;
 }
 
+/* search widget */
+
 .search {
   position: relative;
   height: 50px;
@@ -186,8 +193,8 @@ body {
   width: 50px;
   transition: width 0.3s ease;
   position: absolute;
-  top: 20px;
-  right: 5rem;
+  top: 1rem;
+  right: 3%;
   border-radius: 3px;
 }
 
@@ -198,8 +205,8 @@ body {
   border-radius: 3px;
   font-size: 24px;
   position: absolute;
-  top: 20px;
-  right: 5rem;
+  top: 1rem;
+  right: 3%;
   height: 50px;
   width: 50px;
   transition: transform 0.3s ease;
@@ -218,11 +225,7 @@ body {
 }
 
 .search.active .input {
-  width: 300px;
-}
-
-.search.active .btn {
-  transform: translateX(10px);
+  width: 290px;
 }
 
 .loading {
@@ -232,4 +235,24 @@ body {
   text-align: center;
   width: 50%;
   margin: 10rem auto;
+}
+
+@media (max-width: 950px) {
+  .products-grid {
+    grid-template-rows: repeat(10, 12rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(1, 70%);
+    grid-template-rows: repeat(10, 11rem);
+  }
+}
+
+@media (max-width: 450px) {
+  .products-grid {
+    grid-template-columns: 90%;
+    grid-template-rows: repeat(10, 12rem);
+  }
 }

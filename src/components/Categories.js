@@ -7,22 +7,24 @@ const Categories = (props) => {
   const { handleChange } = props;
 
   return (
-    <select
-      className="options"
-      onChange={handleChange}
-      value={data.categorySelected}
-      required
-    >
-      <option value="Select a Category">Select a Category</option>
-      <option value="all">all</option>
-      <option value="lowest price">lowest price</option>
-      <option value="highest price">highest price</option>
-      {unique.map((category) => (
-        <option key={category} value={category}>
-          {category}
-        </option>
-      ))}
-    </select>
+    <div className="selectDiv">
+      <select
+        className="options"
+        onChange={handleChange}
+        value={data.categorySelected}
+        required
+      >
+        <option value="Select a Category">Select a Category</option>
+        <option value="all">all</option>
+        <option value="lowest price">lowest price</option>
+        <option value="highest price">highest price</option>
+        {unique.map((category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 
