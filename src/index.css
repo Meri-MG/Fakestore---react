@@ -224,3 +224,12 @@ body {
 .search.active .btn {
   transform: translateX(10px);
 }
+
+.loading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-more-white);
+  text-align: center;
+  width: 50%;
+  margin: 10rem auto;
+}

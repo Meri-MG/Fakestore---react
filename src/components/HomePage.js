@@ -18,15 +18,22 @@ const Home = () => {
     setIsLoaded(true);
   }, []);
 
+  let selectedChangeFilter;
+
   const handleChange = (e) => {
     setValue(e.target.value);
+    setSearchOpen(false);
+    setSearchField('');
   };
 
   const handleSearch = (e) => {
     setSearchField(e.target.value);
   };
 
-  let selectedChangeFilter = data;
+  const handleSearchClick = () => {
+    setValue('');
+  };
+
   if (value === "men's clothing") {
     selectedChangeFilter = data.filter(
       (product) => product.category === "men's clothing",
@@ -49,13 +56,15 @@ const Home = () => {
   } else if (value === 'highest price') {
     // eslint-disable-next-line max-len
     selectedChangeFilter = data.sort((a, b) => b.price - a.price);
+  } else if (value === 'Select a Category' || value === 'all') {
+    selectedChangeFilter = data;
+  } else {
+    // eslint-disable-next-line max-len
+    selectedChangeFilter = data.filter((product) => product.title.toLowerCase().includes(searchField.toLowerCase()));
   }
 
-  // eslint-disable-next-line max-len
-  selectedChangeFilter = data.filter((product) => product.title.toLowerCase().includes(searchField.toLowerCase()));
-
   if (!isLoaded) {
-    return <>loading...</>;
+    return <div className="loading">loading...</div>;
   }
   return (
     <>
@@ -63,6 +72,7 @@ const Home = () => {
         handleSearch={handleSearch}
         open={searchOpen}
         setOpen={setSearchOpen}
+        handleSearchClick={handleSearchClick}
       />
       <Categories
         data={data}
