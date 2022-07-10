@@ -245,11 +245,28 @@ body {
     grid-template-columns: repeat(1, 70%);
     grid-template-rows: repeat(10, 11rem);
   }
+
+  .info-wrapper {
+    flex-direction: column-reverse;
+    width: 70%;
+  }
+
+  .info-wrapper img {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (max-width: 450px) {
   .products-grid {
     grid-template-columns: 90%;
     grid-template-rows: repeat(10, 12rem);
+  }
+
+  .info-wrapper {
+    width: 80%;
+  }
+
+  .info-wrapper img {
+    margin-left: 0;
   }
 }
